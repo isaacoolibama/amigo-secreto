@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonte Montserrat (exemplo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" 
+    rel="stylesheet" 
+  />
+
+  <!-- Arquivo de estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Amigo Secreto</title>
+</head>
+<body>
+  <main class="main-content">
+    <header class="header-banner">
+      <h1 class="main-title">Amigo Secreto</h1>
+      <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto" class="header-image">
+    </header>
+    
+    <section class="input-section">
+      <h2 class="section-title">Digite o nome dos seus amigos</h2>
+      
+      <!-- 
+        FORMULÁRIO:
+        - onsubmit chama "adicionarAmigo()" e retorna false para impedir recarregamento da página
+        - Botão "Adicionar" agora é type="submit" (remove onclick)
+      -->
+      <form onsubmit="adicionarAmigo(); return false;" class="input-wrapper">
+        <input 
+          type="text" 
+          id="amigo" 
+          class="input-name" 
+          placeholder="Digite um nome" 
+        />
+        <button type="submit" class="button-add">Adicionar</button>
+      </form>
+
+      <ul id="listaAmigos" class="name-list"></ul>
+
+      <div class="button-container">
+        <button class="button-draw" onclick="sortearAmigo()">Sortear amigo</button>
+        <button class="button-clear" onclick="limparLista()">Limpar lista</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notificação centralizada -->
+  <div id="notification" class="notification">
+    <span id="notification-text"></span>
+    <button class="close-notification" onclick="closeNotification()">Fechar</button>
+  </div>
+
+  <!-- Script principal -->
+  <script src="app.js" defer></script>
+</body>
+</html>
