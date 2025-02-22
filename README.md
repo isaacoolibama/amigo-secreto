@@ -54,7 +54,7 @@ Existem duas formas de executar o projeto: **baixando o ZIP** ou **clonando via 
 Abra o terminal e execute:
 
 ```bash
-git clone https://github.com/seu-usuario/amigo-secreto.git
+git clone https://github.com/isaacoolibama/amigo-secreto.git
 ```
 2. **Navegue até a pasta do projeto:**
 ```bash
